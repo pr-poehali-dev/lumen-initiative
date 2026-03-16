@@ -66,7 +66,7 @@ export function DashboardMockup() {
         <div className="p-3 border-b border-zinc-800/50">
           <div className="flex items-center gap-2 px-2 py-1.5">
             <CirclePower className="w-5 h-5 text-white" />
-            <span className="text-white font-semibold text-sm">Orbit</span>
+            <span className="text-white font-semibold text-sm">SafeNet</span>
             <ChevronDown className="w-3.5 h-3.5 text-zinc-500 ml-auto" />
           </div>
         </div>
@@ -82,8 +82,8 @@ export function DashboardMockup() {
 
         {/* Main nav */}
         <div className="px-3 space-y-0.5">
-          <NavItem icon={Inbox} label="Входящие" badge={3} active />
-          <NavItem icon={CircleUser} label="Мои задачи" />
+          <NavItem icon={Inbox} label="Угрозы" badge={3} active />
+          <NavItem icon={CircleUser} label="Мой профиль" />
         </div>
 
         {/* Workspace section */}
@@ -92,10 +92,10 @@ export function DashboardMockup() {
             Пространство
           </div>
           <div className="space-y-0.5 mt-1">
-            <NavItem icon={Layers} label="Инициативы" hasSubmenu />
-            <NavItem icon={FolderKanban} label="Проекты" hasSubmenu />
-            <NavItem icon={LayoutGrid} label="Представления" hasSubmenu />
-            <NavItem icon={Users} label="Команды" hasSubmenu />
+            <NavItem icon={Layers} label="Виды угроз" hasSubmenu />
+            <NavItem icon={FolderKanban} label="Гайды защиты" hasSubmenu />
+            <NavItem icon={LayoutGrid} label="Инструменты" hasSubmenu />
+            <NavItem icon={Users} label="Сообщество" hasSubmenu />
           </div>
         </div>
 
@@ -105,9 +105,9 @@ export function DashboardMockup() {
             Избранное
           </div>
           <div className="space-y-0.5 mt-1">
-            <NavItem icon={Smartphone} label="Мобильное приложение" color="text-blue-400" />
-            <NavItem icon={Map} label="Роадмап Q1" color="text-orange-400" />
-            <NavItem icon={FileText} label="API Документация" color="text-emerald-400" />
+            <NavItem icon={Smartphone} label="Безопасность телефона" color="text-blue-400" />
+            <NavItem icon={Map} label="Чек-лист 2025" color="text-orange-400" />
+            <NavItem icon={FileText} label="База знаний" color="text-emerald-400" />
           </div>
         </div>
 
@@ -117,8 +117,8 @@ export function DashboardMockup() {
             Ваши команды
           </div>
           <div className="space-y-0.5 mt-1">
-            <NavItem icon={Sparkles} label="Продукт" hasSubmenu />
-            <NavItem icon={Settings} label="Разработка" hasSubmenu />
+            <NavItem icon={Sparkles} label="Эксперты" hasSubmenu />
+            <NavItem icon={Settings} label="Настройки" hasSubmenu />
           </div>
         </div>
 
@@ -134,7 +134,7 @@ export function DashboardMockup() {
         variants={panelVariants}
       >
         <div className="px-4 py-3 border-b border-zinc-800/50 flex items-center justify-between">
-          <h3 className="text-white font-semibold text-sm">Входящие</h3>
+          <h3 className="text-white font-semibold text-sm">Угрозы</h3>
           <div className="flex items-center gap-2">
             <button className="text-zinc-500 hover:text-white transition-colors">
               <Plus className="w-4 h-4" />
@@ -144,67 +144,67 @@ export function DashboardMockup() {
 
         <div className="flex-1 overflow-auto scrollbar-hide">
           <InboxItem
-            id="ENG-135"
-            title="Рефакторинг краулера"
-            subtitle="nan назначил вам"
+            id="SEC-001"
+            title="Фишинговый сайт sber-online.ru"
+            subtitle="Высокий риск — не переходить"
             time="2ч"
             avatar="https://i.pravatar.cc/32?img=1"
-            status="in-progress"
+            status="bug"
             active
           />
           <InboxItem
-            id="LLM"
-            title="LLM Чат-бот"
-            subtitle="Обновление проекта от raissa"
+            id="SEC-002"
+            title="Звонок от «МВД»"
+            subtitle="Телефонное мошенничество"
             time="1д"
             avatar="https://i.pravatar.cc/32?img=2"
-            status="todo"
+            status="bug"
             isProject
           />
           <InboxItem
-            id="ENG-159"
-            title="Ошибка загрузки изображений"
-            subtitle="SLA нарушен"
+            id="SEC-003"
+            title="Email с вирусом"
+            subtitle="Не открывать вложение"
             time="2д"
             avatar="https://i.pravatar.cc/32?img=3"
             status="bug"
           />
           <InboxItem
-            id="DES-498"
-            title="Редизайн настроек..."
-            subtitle="karri упомянул вас"
+            id="SEC-004"
+            title="Скам в Telegram"
+            subtitle="Новая схема развода"
             time="4ч"
             avatar="https://i.pravatar.cc/32?img=4"
+            status="in-progress"
+          />
+          <InboxItem
+            id="SEC-005"
+            title="Слабый пароль обнаружен"
+            subtitle="Рекомендуем сменить"
+            time="1н"
+            avatar="https://i.pravatar.cc/32?img=5"
             status="todo"
           />
           <InboxItem
-            id="ENG-160"
-            title="Движок Holtzmann сломан"
-            subtitle="Вы просили напомнить"
-            time="1н"
-            avatar="https://i.pravatar.cc/32?img=5"
-            status="bug"
-          />
-          <InboxItem
-            title="Эксперименты с регистрацией"
-            subtitle="Добавлен в проект"
+            title="Чек-лист безопасности"
+            subtitle="Пройдите проверку"
             avatar="https://i.pravatar.cc/32?img=6"
             status="done"
             isProject
           />
           <InboxItem
-            id="MKT-122"
-            title="Ассеты для маркетинга"
-            subtitle="erin отметил как Дубликат"
+            id="SEC-006"
+            title="Поддельный магазин"
+            subtitle="Не оплачивать заказ"
             time="1н"
             avatar="https://i.pravatar.cc/32?img=7"
-            status="done"
+            status="bug"
           />
           <InboxItem
-            title="Главная страница v3"
-            subtitle="Обновление проекта от paco"
+            title="Утечка данных"
+            subtitle="Ваш email в базе мошенников"
             avatar="https://i.pravatar.cc/32?img=8"
-            status="todo"
+            status="in-progress"
             isProject
           />
         </div>
@@ -215,28 +215,28 @@ export function DashboardMockup() {
         {/* Header breadcrumb */}
         <div className="px-5 py-3 border-b border-zinc-800/50 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-1.5 text-xs">
-            <span className="text-zinc-500">Разработка</span>
+            <span className="text-zinc-500">База знаний</span>
             <span className="text-zinc-600">›</span>
-            <span className="text-emerald-400">Spice harvester</span>
+            <span className="text-emerald-400">Фишинг</span>
             <span className="text-zinc-600">›</span>
-            <span className="text-zinc-300">ENG-135</span>
+            <span className="text-zinc-300">SEC-001</span>
           </div>
           <MoreHorizontal className="w-4 h-4 text-zinc-500" />
         </div>
 
         {/* Content */}
         <div className="flex-1 p-5 overflow-auto scrollbar-hide">
-          <h2 className="text-white text-xl font-semibold mb-5">Рефакторинг краулера</h2>
+          <h2 className="text-white text-xl font-semibold mb-5">Фишинговый сайт: разбор угрозы</h2>
 
           {/* Code block */}
           <div className="bg-zinc-900/80 rounded-lg p-4 text-[11px] font-mono mb-5 border border-zinc-800/50">
             <div className="space-y-2">
               <div>
-                <span className="text-zinc-500">Комментарий.</span>
-                <span className="text-amber-300">documentContent</span>
-                <span className="text-zinc-400"> определен неверно. Должен быть </span>
-                <span className="text-cyan-300">LazyManyToOne</span>
-                <span className="text-zinc-400"> связью.</span>
+                <span className="text-zinc-500">Анализ.</span>
+                <span className="text-amber-300">sber-online.ru</span>
+                <span className="text-zinc-400"> не является официальным сайтом. Домен зарегистрирован </span>
+                <span className="text-cyan-300">3 дня назад</span>
+                <span className="text-zinc-400"> — признак фишинга.</span>
               </div>
               <div className="mt-3 text-zinc-600">
                 {/* The document content that this comment is associated with. */}

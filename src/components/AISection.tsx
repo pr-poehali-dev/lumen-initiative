@@ -2,12 +2,12 @@ import { motion } from "framer-motion"
 import { ChevronRight, Check, Paperclip, Globe, Lightbulb } from "lucide-react"
 
 const agents = [
-  { name: "Cursor", isAgent: true, selected: true, icon: "◇" },
-  { name: "GitHub Copilot", isAgent: true, selected: false, icon: "◉" },
-  { name: "Sentry", isAgent: true, selected: false, icon: "◈" },
-  { name: "Leela", isAgent: false, selected: false, icon: "○" },
-  { name: "Codex", isAgent: true, selected: false, icon: "◎" },
-  { name: "Conor", isAgent: false, selected: false, icon: "○" },
+  { name: "Проверить ссылку на фишинг", isAgent: true, selected: true, icon: "◇" },
+  { name: "Анализ подозрительного сайта", isAgent: true, selected: false, icon: "◉" },
+  { name: "Проверка номера телефона", isAgent: true, selected: false, icon: "◈" },
+  { name: "Оценить email на скам", isAgent: false, selected: false, icon: "○" },
+  { name: "Проверить реквизиты", isAgent: true, selected: false, icon: "◎" },
+  { name: "Пожаловаться на мошенника", isAgent: false, selected: false, icon: "○" },
 ]
 
 export function AISection() {
@@ -31,7 +31,7 @@ export function AISection() {
             className="flex items-center gap-2 mb-6"
           >
             <div className="w-2 h-2 rounded-full bg-blue-500" />
-            <span className="text-zinc-400 text-sm">Искусственный интеллект</span>
+            <span className="text-zinc-400 text-sm">Как защититься</span>
             <ChevronRight className="w-4 h-4 text-zinc-500" />
           </motion.div>
 
@@ -49,7 +49,7 @@ export function AISection() {
               lineHeight: 1.1,
             }}
           >
-            Разработка с ИИ-помощником
+            Инструменты проверки и защиты
           </motion.h2>
 
           {/* Description */}
@@ -60,8 +60,7 @@ export function AISection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-zinc-400 max-w-md mb-8"
           >
-            <span className="text-white font-medium">Orbit для агентов.</span> Выбирайте из множества ИИ-агентов и
-            делегируйте задачи: от генерации кода до других технических задач.
+            <span className="text-white font-medium">Проверьте прямо сейчас.</span> Воспользуйтесь инструментами для быстрой проверки подозрительных ссылок, сайтов и телефонных номеров на признаки мошенничества.
           </motion.p>
 
           {/* Learn more button */}
@@ -135,7 +134,7 @@ export function AISection() {
 
                 {/* Input field */}
                 <div className="bg-zinc-800/50 border border-zinc-700 rounded-t-xl px-5 py-4">
-                  <span className="text-zinc-500 italic">Назначить...</span>
+                  <span className="text-zinc-500 italic">Введите ссылку или номер для проверки...</span>
                 </div>
 
                 {/* Dropdown options */}
@@ -200,81 +199,72 @@ export function AISection() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Left column */}
               <div className="border-t border-r border-b border-zinc-800/60 pt-12 pr-12 pb-16">
-                <h3 className="text-zinc-200 font-medium text-xl mb-3">Автопилот для продукта</h3>
+                <h3 className="text-zinc-200 font-medium text-xl mb-3">Признаки мошенничества</h3>
                 <p className="text-zinc-500 text-base mb-8">
-                  Оптимизируйте рабочие процессы с ИИ-ассистентом для рутинных и ручных задач.
+                  Научитесь распознавать красные флаги до того, как станет слишком поздно.
                 </p>
 
-                {/* Triage Intelligence Card */}
                 <div className="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-5">
                   <div className="flex items-center gap-2 mb-5">
                     <svg className="w-4 h-4 text-zinc-500" viewBox="0 0 16 16" fill="currentColor">
                       <path d="M8 0L9.5 5.5L15 7L9.5 8.5L8 14L6.5 8.5L1 7L6.5 5.5L8 0Z" />
                     </svg>
                     <span className="text-zinc-500 text-sm">
-                      Умная <span className="text-zinc-300">сортировка</span>
+                      Умный <span className="text-zinc-300">анализ угрозы</span>
                     </span>
                   </div>
 
-                  {/* Suggestions Row */}
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-zinc-600 text-sm w-20">Рекомендации</span>
+                    <span className="text-zinc-600 text-sm w-24">Тип угрозы</span>
                     <div className="flex items-center gap-2">
                       <span
                         className="flex items-center gap-1.5 rounded-md px-2 py-1 text-sm"
-                        style={{ background: "#7170ff" }}
+                        style={{ background: "#ef4444" }}
                       >
                         <span className="w-4 h-4 bg-white/30 rounded-full" />
-                        <span className="text-white">nan</span>
+                        <span className="text-white">Фишинг</span>
                       </span>
                       <span className="flex items-center gap-1.5 bg-zinc-800/30 rounded-md px-2 py-1 text-sm text-zinc-600">
                         <span className="w-3 h-3 border border-zinc-700 rounded" />
-                        Рефакторинг приложения
-                      </span>
-                      <span className="flex items-center gap-1.5 text-sm text-zinc-700">
-                        <span className="w-2 h-2 bg-zinc-600 rounded-full" />
-                        Slack
+                        Высокий риск
                       </span>
                     </div>
                   </div>
 
-                  {/* Duplicate Row */}
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-zinc-600 text-sm w-20">Дубликат</span>
+                    <span className="text-zinc-600 text-sm w-24">Признаки</span>
                   </div>
 
-                  {/* Related Row */}
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-zinc-600 text-sm w-20">Связано с</span>
+                    <span className="text-zinc-600 text-sm w-24">Рекомендации</span>
                   </div>
 
-                  {/* Expanded Suggestion Card */}
                   <div className="bg-zinc-800/40 rounded-lg p-4 ml-4">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="w-5 h-5 bg-zinc-600 rounded-full" />
-                      <span className="text-zinc-300 text-sm font-medium">nan</span>
+                      <span className="w-5 h-5 bg-red-600/60 rounded-full" />
+                      <span className="text-zinc-300 text-sm font-medium">Подозрительная ссылка</span>
                     </div>
 
-                    <p className="text-zinc-500 text-xs mb-2">Почему этот исполнитель</p>
+                    <p className="text-zinc-500 text-xs mb-2">Почему это опасно</p>
                     <p className="text-zinc-500 text-sm mb-4">
-                      Этот человек работал над похожими задачами, связанными с производительностью мобильного приложения
+                      Сайт имитирует известный банк, но домен отличается на одну букву — классический признак фишинга
                     </p>
 
-                    <p className="text-zinc-500 text-xs mb-2">Альтернативы</p>
+                    <p className="text-zinc-500 text-xs mb-2">Что делать</p>
                     <div className="flex items-center gap-2 mb-4">
                       <span className="flex items-center gap-1.5 bg-zinc-700/50 rounded-md px-2 py-1 text-sm">
-                        <span className="w-4 h-4 bg-zinc-500 rounded-full" />
-                        <span className="text-zinc-400">yann</span>
+                        <span className="w-4 h-4 bg-red-500/40 rounded-full" />
+                        <span className="text-zinc-400">Не переходить</span>
                       </span>
                       <span className="flex items-center gap-1.5 bg-zinc-700/50 rounded-md px-2 py-1 text-sm">
                         <span className="w-4 h-4 bg-zinc-500 rounded-full" />
-                        <span className="text-zinc-400">erin</span>
+                        <span className="text-zinc-400">Сообщить</span>
                       </span>
                     </div>
 
                     <button className="w-full flex items-center justify-center gap-2 bg-zinc-700/50 hover:bg-zinc-600/50 text-zinc-300 text-sm py-2.5 rounded-md transition-colors">
                       <Check className="w-4 h-4" />
-                      Принять
+                      Понятно, защититься
                     </button>
                   </div>
                 </div>
@@ -282,45 +272,45 @@ export function AISection() {
 
               {/* Right column */}
               <div className="border-t border-b border-zinc-800/60 pt-12 pl-12 pb-16">
-                <h3 className="text-zinc-200 font-medium text-xl mb-3">Orbit MCP</h3>
+                <h3 className="text-zinc-200 font-medium text-xl mb-3">Задайте вопрос эксперту</h3>
                 <p className="text-zinc-500 text-base mb-8">
-                  Подключите Orbit к любимым инструментам: Cursor, Claude, ChatGPT и другим.
+                  Опишите ситуацию — получите конкретный совет по защите и дальнейшим действиям.
                 </p>
 
-                {/* MCP Code Snippet */}
                 <div className="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-5 font-mono text-sm">
-                  <p className="text-zinc-700 mb-3">//mcp.orbit.app/sse</p>
+                  <p className="text-zinc-700 mb-3">// safenet.help/ask</p>
                   <div className="space-y-1 mb-6">
                     <p>
-                      <span className="text-orange-400/70">"mcpServers"</span>
-                      <span className="text-zinc-500">: {"{"}</span>
-                    </p>
-                    <p className="pl-4">
-                      <span className="text-orange-400/70">"orbit"</span>
-                      <span className="text-zinc-500">: {"{"}</span>
-                    </p>
-                    <p className="pl-8">
-                      <span className="text-orange-400/70">"command"</span>
+                      <span className="text-orange-400/70">"topic"</span>
                       <span className="text-zinc-500">: </span>
-                      <span className="text-green-400/70">"npx"</span>
+                      <span className="text-green-400/70">"phishing"</span>
+                    </p>
+                    <p>
+                      <span className="text-orange-400/70">"urgency"</span>
+                      <span className="text-zinc-500">: </span>
+                      <span className="text-green-400/70">"high"</span>
+                    </p>
+                    <p>
+                      <span className="text-orange-400/70">"action"</span>
+                      <span className="text-zinc-500">: </span>
+                      <span className="text-green-400/70">"advise"</span>
                     </p>
                   </div>
 
-                  {/* Ask Anything Input */}
                   <div className="bg-zinc-800/40 rounded-lg p-4">
                     <div className="flex items-center gap-2 mb-4">
                       <span className="w-0.5 h-5 bg-zinc-600" />
-                      <span className="text-zinc-600">Спросите что угодно</span>
+                      <span className="text-zinc-600">Опишите ситуацию...</span>
                     </div>
 
                     <div className="flex items-center gap-2">
                       <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
                         <Paperclip className="w-3.5 h-3.5" />
-                        Файл
+                        Скриншот
                       </button>
                       <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
                         <Globe className="w-3.5 h-3.5" />
-                        Поиск
+                        Ссылка
                       </button>
                       <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
                         <Lightbulb className="w-3.5 h-3.5" />
